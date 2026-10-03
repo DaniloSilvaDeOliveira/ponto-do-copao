@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ponto do Copão · Bebidas · Delivery</title>
+<meta name="description" content="Ponto do Copão: bebidas geladas, destilados e combo pra montar seu copão. Retirada na loja ou delivery. Peça pelo WhatsApp.">
+<meta name="theme-color" content="#111114">
+<meta property="og:title" content="Ponto do Copão · Bebidas · Delivery">
+<meta property="og:description" content="Bebidas geladas, destilados e combo pro copão. Retira na loja ou recebe em casa. Rua Karajá, 21 · Vila Dias, Mogi Mirim.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://www.pontodocopao.com.br/">
+<meta property="og:image" content="https://www.pontodocopao.com.br/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.pontodocopao.com.br/">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/anybody-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='20 12 80 100'%3E%3Cpath d='M60 14C82 14 98 31 98 53C98 80 74 100 60 110C46 100 22 80 22 53C22 31 38 14 60 14Z' fill='%23E7B84B'/%3E%3Cpath d='M47 45Q60 38 73 45L72.5 48L47.5 48ZM49 50L71 50L67.5 74Q67 78 63 78L57 78Q53 78 52.5 74Z' fill='%23111114'/%3E%3Crect x='66.5' y='27' width='5' height='22' rx='2.5' transform='rotate(20 69 38)' fill='%23111114'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Anybody";src:url("fonts/anybody-latin.woff2") format("woff2");font-weight:100 900;font-stretch:50% 150%;font-display:swap}
+@font-face{font-family:"Archivo";src:url("fonts/archivo-latin.woff2") format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+
+:root{
+  --ink:#111114;
+  --gold:#E7B84B;
+  --gold-deep:#3B2E0E;
+  --cream:#F4EBD6;
+  --cream-2:#CBBF9F;
+  --red:#C2412D;
+  --display:"Anybody","Arial Narrow",sans-serif;
+  --text:"Archivo",system-ui,sans-serif;
+  --gut:clamp(1rem,5vw,3rem);
+  --wrap:1120px;
+  --sec:clamp(4.5rem,13vw,8.5rem);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --pin-gold:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='20 12 80 100'%3E%3Cpath d='M60 14C82 14 98 31 98 53C98 80 74 100 60 110C46 100 22 80 22 53C22 31 38 14 60 14Z' fill='%23E7B84B'/%3E%3Cpath d='M47 45Q60 38 73 45L72.5 48L47.5 48ZM49 50L71 50L67.5 74Q67 78 63 78L57 78Q53 78 52.5 74Z' fill='%23111114'/%3E%3Crect x='66.5' y='27' width='5' height='22' rx='2.5' transform='rotate(20 69 38)' fill='%23111114'/%3E%3C/svg%3E");
+  --pin-ink:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='20 12 80 100'%3E%3Cpath d='M60 14C82 14 98 31 98 53C98 80 74 100 60 110C46 100 22 80 22 53C22 31 38 14 60 14Z' fill='%23111114'/%3E%3Cpath d='M47 45Q60 38 73 45L72.5 48L47.5 48ZM49 50L71 50L67.5 74Q67 78 63 78L57 78Q53 78 52.5 74Z' fill='%23E7B84B'/%3E%3Crect x='66.5' y='27' width='5' height='22' rx='2.5' transform='rotate(20 69 38)' fill='%23E7B84B'/%3E%3C/svg%3E");
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;-webkit-text-size-adjust:100%;scroll-behavior:smooth;scrollbar-color:var(--gold) var(--ink)}
+body{margin:0;background:var(--ink);color:var(--cream);font:400 1.0625rem/1.55 var(--text);overflow-x:clip;caret-color:var(--gold);padding-bottom:calc(5.25rem + env(safe-area-inset-bottom))}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .85 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:var(--gold);color:var(--ink)}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:var(--gold);border:2px solid var(--ink);border-radius:6px}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.on-gold :focus-visible{outline-color:var(--ink)}
+img,svg{display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:200;background:var(--gold);color:var(--ink);padding:.75rem 1rem;font-weight:700;border-radius:4px}
+.skip:focus{top:1rem}
+.wrap{width:min(100% - 2*var(--gut),var(--wrap));margin-inline:auto}
+
+/* --- stacked flyer type, fitted edge to edge --- */
+.stack{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.86;letter-spacing:-.01em}
+.fit{display:block;white-space:nowrap;max-width:100%;min-width:0;--max:220}
+.fit+.fit{margin-top:.06em}
+.fit>span{display:inline-block;font-variation-settings:"wdth" var(--w,80);font-stretch:calc(var(--w,80) * 1%);font-size:clamp(2.6rem,15vw,7rem)}
+
+
+/* --- buttons --- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.5rem;padding:.9rem 1.4rem;border-radius:4px;border:0;font:900 1.0625rem/1 var(--display);font-variation-settings:"wdth" 112;font-stretch:112%;text-transform:uppercase;letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background-color .2s}
+.btn svg{width:1.45em;height:1.45em;flex:none}
+.btn--wa{background:var(--gold);color:var(--ink);box-shadow:0 8px 20px -10px rgba(0,0,0,.75)}
+.btn--wa:hover{transform:translateY(-2px);box-shadow:0 14px 26px -12px rgba(0,0,0,.85)}
+.btn--wa:active{transform:translateY(1px)}
+.on-gold .btn--wa,.btn--ink{background:var(--ink);color:var(--gold);box-shadow:0 10px 24px -10px rgba(17,17,20,.7)}
+.btn--ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 2px var(--cream-2)}
+.btn--ghost:hover{box-shadow:inset 0 0 0 2px var(--gold);color:var(--gold)}
+.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed;transform:none;pointer-events:none;box-shadow:none}
+.btn--block{width:100%}
+
+/* --- starburst seals --- */
+.seal{position:relative;display:grid;place-items:center;aspect-ratio:1;color:var(--cream);text-align:center}
+.seal>svg{position:absolute;inset:0;width:100%;height:100%;fill:var(--red)}
+.seal>span{position:relative;font:900 1rem/.9 var(--display);font-variation-settings:"wdth" 70;font-stretch:70%;text-transform:uppercase;letter-spacing:.01em}
+
+/* ============ HERO ============ */
+.hero{min-height:100svh;display:flex;flex-direction:column;position:relative}
+.hero__top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem var(--gut) 0;font:800 .75rem/1.2 var(--display);font-variation-settings:"wdth" 100;font-stretch:100%;text-transform:uppercase;letter-spacing:.07em;color:var(--cream-2);white-space:nowrap}
+@media (min-width:640px){.hero__top{font-variation-settings:"wdth" 125;font-stretch:125%;letter-spacing:.12em}}
+.status[hidden]{display:none}
+.status{display:inline-flex;align-items:center;gap:.5rem}
+.status__dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(231,184,75,.6)}
+.status[data-open="true"] .status__dot{animation:pulse 2.2s var(--ease) infinite}
+.status[data-open="false"] .status__dot{background:var(--cream-2)}
+.hero__body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(1rem,4vh,2.5rem) var(--gut) 1.5rem;gap:clamp(.9rem,2.4vh,1.6rem)}
+.hero__mark{position:relative;width:min(46vw,250px,30svh);margin-inline:auto}
+.mark{width:100%;height:auto;color:var(--gold);filter:drop-shadow(0 18px 24px rgba(0,0,0,.55))}
+.seal--hero{position:absolute;width:42%;right:-24%;top:4%;transform:rotate(12deg)}
+.seal--hero>svg{animation:turn 40s linear infinite}
+.seal--hero>span{font-size:clamp(.85rem,4vw,1.2rem)}
+.hero h1{width:100%}
+.hero h1 .fit:first-child{--w:74}
+.hero h1 .fit:last-child{--w:56;color:var(--gold)}
+.tagline{margin:0;display:flex;align-items:center;justify-content:center;gap:.9rem;font:800 clamp(.95rem,4.2vw,1.3rem)/1 var(--display);font-variation-settings:"wdth" 140;font-stretch:140%;text-transform:uppercase;letter-spacing:.2em;color:var(--cream)}
+.tagline i{font-style:normal;color:var(--gold)}
+.band{background:var(--gold);color:var(--ink);padding:1.1rem var(--gut) calc(1.25rem + env(safe-area-inset-bottom) * 0);display:grid;gap:.75rem}
+.band__label{margin:0;display:flex;align-items:center;gap:.75rem;font:900 .9rem/1 var(--display);font-variation-settings:"wdth" 150;font-stretch:150%;text-transform:uppercase;letter-spacing:.14em}
+.band__label::after{content:"";flex:1;height:2px;background:var(--ink)}
+.band__sub{margin:0;font:500 .9rem/1.35 var(--text);color:var(--gold-deep)}
+
+/* load motion: lines land like a print pass */
+@media (prefers-reduced-motion:no-preference){
+  .land{animation:land .9s var(--ease) both;animation-delay:calc(var(--i,0) * 90ms + 80ms)}
+}
+@keyframes land{from{opacity:0;transform:translateY(.35em) scale(1.04);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@keyframes turn{to{transform:rotate(360deg)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(231,184,75,.55)}70%,100%{box-shadow:0 0 0 .55rem rgba(231,184,75,0)}}
+
+/* ============ TAPE ============ */
+.tape{position:relative;z-index:2;background:var(--gold);color:var(--ink);transform:rotate(-2.4deg);margin:2.25rem -6vw;overflow:hidden;box-shadow:0 10px 30px -12px rgba(0,0,0,.8)}
+.tape--ink{background:var(--cream);transform:rotate(1.8deg)}
+.tape__track{display:flex;width:max-content;animation:roll 34s linear infinite}
+.tape--ink .tape__track{animation-direction:reverse}
+.tape__run{display:flex;align-items:center;gap:1.1rem;padding:.7rem 0 .7rem 1.1rem;font:900 1.15rem/1 var(--display);font-variation-settings:"wdth" 118;font-stretch:118%;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.tape__run b{display:inline-block;width:.85rem;height:1.05rem;background:var(--pin-ink) center/contain no-repeat}
+@keyframes roll{to{transform:translateX(-50%)}}
+
+/* ============ LINE-UP ============ */
+.lineup{background:var(--gold);color:var(--ink);padding:calc(var(--sec) * .8) 0 var(--sec);margin-top:-3.25rem}
+.lineup h2 .fit{--w:62}
+.acts{list-style:none;margin:2.25rem 0 0;padding:0;border-top:3px solid var(--ink)}
+.act{border-bottom:3px solid var(--ink)}
+.act>a{display:grid;grid-template-columns:minmax(0,1fr);gap:.55rem;padding:1.15rem var(--gut);margin-inline:calc(-1 * var(--gut));text-decoration:none;position:relative;transition:background-color .25s,color .25s}
+.act>a[href]:hover,.act>a[href]:focus-visible{background:var(--ink);color:var(--gold);outline:none}
+.act>a[href]:hover .act__what,.act>a[href]:focus-visible .act__what{color:var(--cream-2)}
+.act>a[href]:hover .act__go,.act>a[href]:focus-visible .act__go{color:var(--gold)}
+.act__name{font:900 1rem/.86 var(--display);text-transform:uppercase}
+.act:nth-child(1) .act__name{--w:66}
+.act:nth-child(2) .act__name{--w:96}
+.act:nth-child(3) .act__name{--w:70}
+.act__what{font:500 1rem/1.4 var(--text);color:var(--gold-deep);max-width:52ch}
+.act__go{display:inline-flex;align-items:center;gap:.4rem;font:900 .85rem/1 var(--display);font-variation-settings:"wdth" 140;font-stretch:140%;text-transform:uppercase;letter-spacing:.12em}
+.act__go svg{width:1.1rem;height:1.1rem;transition:transform .35s var(--ease)}
+.act>a[href]:hover .act__go svg{transform:translateX(4px)}
+.steps{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;margin:.15rem 0 .1rem;padding:0;list-style:none}
+.steps span{display:inline-flex;align-items:baseline;gap:.45rem;font:600 .98rem/1.3 var(--text)}
+.steps b{font:900 1.35rem/1 var(--display);font-variation-settings:"wdth" 60;font-stretch:60%}
+.copao{margin:2.5rem 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem}
+.copao p{margin:0;font:900 clamp(1.7rem,7.4vw,2.8rem)/.95 var(--display);font-variation-settings:"wdth" 84;font-stretch:84%;text-transform:uppercase;max-width:15ch}
+
+/* ============ RETIRA / DELIVERY ============ */
+.modes{padding:var(--sec) 0 calc(var(--sec) * .6)}
+.modes h2 .fit:first-child{--w:92}
+.modes h2 .fit:last-child{--w:60;color:var(--gold)}
+.modes__grid{display:grid;gap:3.25rem;margin-top:3rem}
+.mode{border-top:3px solid var(--gold);padding-top:1.25rem;position:relative}
+.mode h3{margin:0 0 .6rem;font:900 clamp(1.7rem,7.5vw,2.4rem)/.9 var(--display);font-variation-settings:"wdth" 122;font-stretch:122%;text-transform:uppercase;color:var(--gold)}
+.mode>p{margin:0 0 1.25rem;max-width:40ch;font-size:1.0625rem}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:.6rem 1rem;margin:0 0 1.5rem;align-items:baseline}
+.facts dt{font:800 .72rem/1.2 var(--display);font-variation-settings:"wdth" 130;font-stretch:130%;text-transform:uppercase;letter-spacing:.14em;color:var(--cream-2)}
+.facts dd{margin:0;font-weight:600}
+.apps{display:flex;flex-wrap:wrap;gap:.45rem}
+.apps>*{display:inline-flex;align-items:center;min-height:2rem;padding:.3rem .7rem;border-radius:3px;box-shadow:inset 0 0 0 1.5px var(--cream-2);font:900 .82rem/1 var(--display);font-variation-settings:"wdth" 110;font-stretch:110%;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;color:var(--cream)}
+a.apps__link:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
+.mode__actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.mode__actions .btn{flex:1 1 12rem}
+.seal--mode{position:absolute;width:5.6rem;right:0;top:-2.9rem;transform:rotate(-10deg)}
+.seal--mode>span{font-size:.92rem}
+
+/* ============ INFO E PEDIDOS (composer) ============ */
+.order{background:var(--ink);padding:var(--sec) 0;position:relative}
+.order::before{content:"";position:absolute;left:0;right:0;top:0;height:26px;transform:translateY(-50%);background:var(--pin-gold) 0 0/21px 26px space no-repeat;margin-inline:var(--gut)}
+.order h2 .fit:first-child{--w:104}
+.order h2 .fit:last-child{--w:76;color:var(--gold)}
+.lede{margin:1.5rem 0 0;max-width:38ch;font-size:1.125rem;color:var(--cream)}
+.composer{display:grid;gap:2rem;margin-top:2.5rem}
+.composer fieldset{border:0;margin:0;padding:0;min-width:0}
+.composer legend{padding:0;margin-bottom:.9rem;font:900 1.05rem/1 var(--display);font-variation-settings:"wdth" 130;font-stretch:130%;text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem}
+.chip{position:relative}
+.chip input,.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span,.seg span{display:inline-flex;align-items:center;gap:.5rem;min-height:3rem;padding:.7rem 1.05rem;border-radius:4px;box-shadow:inset 0 0 0 2px var(--cream-2);font:900 .98rem/1 var(--display);font-variation-settings:"wdth" 96;font-stretch:96%;text-transform:uppercase;letter-spacing:.02em;transition:background-color .2s,color .2s,box-shadow .2s}
+.chip span::before{content:"";width:.95rem;height:.95rem;border-radius:2px;box-shadow:inset 0 0 0 2px currentColor;flex:none}
+.chip input:checked+span{background:var(--gold);color:var(--ink);box-shadow:none}
+.chip input:checked+span::before{background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%23E7B84B' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat;box-shadow:none}
+.chip:hover span,.seg label:hover span{box-shadow:inset 0 0 0 2px var(--gold)}
+.chip input:focus-visible+span,.seg input:focus-visible+span{outline:3px solid var(--gold);outline-offset:3px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.seg label{position:relative}
+.seg span{width:100%;justify-content:center}
+.seg input:checked+span{background:var(--cream);color:var(--ink);box-shadow:none}
+.field{display:grid;gap:.45rem;margin-top:1rem}
+.field[hidden]{display:none}
+.field span{font:600 .9rem/1.2 var(--text);color:var(--cream-2)}
+.field input{min-height:3.25rem;padding:.75rem .9rem;border-radius:4px;border:0;background:var(--ink);color:var(--cream);box-shadow:inset 0 0 0 2px var(--cream-2);font:500 1.0625rem/1.2 var(--text)}
+.field input::placeholder{color:#9A9078}
+.field input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--gold)}
+.ticket{margin:0;background:var(--cream);color:var(--ink);padding:clamp(1.6rem,3vw,2.6rem) clamp(1.25rem,3vw,2.4rem) clamp(1.35rem,2.6vw,2.2rem);border-radius:2px;transform:rotate(-1.2deg);box-shadow:0 22px 40px -18px rgba(0,0,0,.9);position:relative;
+  -webkit-mask:radial-gradient(circle 7px at 50% 0,#0000 98%,#000) 0 0/22px 100% repeat-x;mask:radial-gradient(circle 7px at 50% 0,#0000 98%,#000) 0 0/22px 100% repeat-x}
+.ticket figcaption{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.8rem;padding-bottom:.7rem;border-bottom:2px dashed rgba(17,17,20,.35);font:900 .8rem/1 var(--display);font-variation-settings:"wdth" 140;font-stretch:140%;text-transform:uppercase;letter-spacing:.12em}
+.ticket figcaption i{width:1.1rem;height:1.4rem;background:var(--pin-ink) center/contain no-repeat;flex:none}
+.ticket p{margin:0;font:500 clamp(1.15rem,1.6vw,1.55rem)/1.45 var(--text);white-space:pre-line;min-height:4.4em}
+.composer__send{display:grid;gap:.7rem}
+.composer__note{margin:0;font-size:.875rem;color:var(--cream-2)}
+
+/* ============ FOOTER ============ */
+.foot{padding:var(--sec) 0 2.5rem}
+.foot__wa{display:block;text-decoration:none;border-block:3px solid var(--gold);padding:1.25rem 0;transition:color .2s}
+.foot__wa .fit:first-child{--w:150;color:var(--gold)}
+.foot__wa .fit:first-child>span{font-size:clamp(1rem,5vw,1.6rem)}
+.foot__wa strong{display:block;margin-top:.6rem;font:900 clamp(1.8rem,9vw,3.4rem)/1 var(--display);font-variation-settings:"wdth" 74;font-stretch:74%;font-variant-numeric:tabular-nums}
+.foot__wa[href]:hover strong{color:var(--gold)}
+.foot__facts{margin:2rem 0 0}
+.foot__brand{display:flex;align-items:center;gap:.9rem;margin:3rem 0 0}
+.foot__brand svg{width:2.4rem;height:auto;color:var(--gold);flex:none}
+.foot__brand span{font:900 1.15rem/1 var(--display);font-variation-settings:"wdth" 120;font-stretch:120%;text-transform:uppercase;letter-spacing:.04em}
+.foot__brand small{display:block;margin-top:.35rem;font:800 .72rem/1 var(--display);font-variation-settings:"wdth" 140;font-stretch:140%;letter-spacing:.2em;color:var(--cream-2)}
+.legal{margin:2rem 0 0;padding-top:1.25rem;border-top:1px solid rgba(203,191,159,.25);font-size:.875rem;line-height:1.5;color:var(--cream-2);max-width:60ch}
+.legal strong{color:var(--cream)}
+
+/* ============ DOCK (sticky CTA) ============ */
+.dock[hidden]{display:none}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--gold);color:var(--ink);padding:.6rem var(--gut) calc(.6rem + env(safe-area-inset-bottom));display:flex;align-items:center;gap:.9rem;transform:translateY(110%);transition:transform .5s var(--ease);box-shadow:0 -10px 30px -12px rgba(0,0,0,.8)}
+.dock.is-on{transform:none}
+.dock .btn{flex:1;min-height:3.4rem}
+.dock__status{font:900 .72rem/1.05 var(--display);font-variation-settings:"wdth" 120;font-stretch:120%;text-transform:uppercase;letter-spacing:.08em;max-width:7.5rem}
+
+/* ============ WIDER SCREENS ============ */
+@media (min-width:640px){
+  .act>a{grid-template-columns:minmax(0,1fr) auto;align-items:end;column-gap:2rem}
+  .act__name{grid-column:1/-1}
+  .act__what,.steps{grid-column:1}
+  .act__go{grid-column:2;grid-row:2 / span 2;justify-self:end;align-self:end}
+  .modes__grid{grid-template-columns:1fr 1fr;gap:3rem}
+}
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .hero{min-height:min(100svh,860px)}
+  .hero__body{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:2rem 4.5rem;width:min(100% - 2*var(--gut),var(--wrap));margin-inline:auto;padding-inline:0}
+  .hero__mark{width:min(100%,360px);grid-row:1 / span 2;justify-self:center}
+  .tagline{justify-content:flex-start}
+  .band{grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem 2rem;padding-inline:max(var(--gut),(100% - var(--wrap)) / 2)}
+  .band__label::after{display:none}
+  .band .btn{min-width:20rem}
+  .composer{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-areas:"items ticket" "mode ticket" "mode send";column-gap:4rem;align-items:start}
+  .composer>fieldset:nth-of-type(1){grid-area:items}
+  .composer>fieldset:nth-of-type(2){grid-area:mode}
+  .ticket{grid-area:ticket}
+  .composer__send{grid-area:send}
+  .composer__send .btn{min-height:4.25rem;font-size:1.3rem}
+  .foot__grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:3rem;align-items:end}
+  .dock{left:auto;right:1.5rem;bottom:1.5rem;width:24rem;border-radius:6px;transform:translateY(calc(100% + 2.5rem))}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#pedido">Pular para o pedido</a>
+
+<!-- sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="pin" viewBox="20 12 80 100"><path d="M60 14C82 14 98 31 98 53C98 80 74 100 60 110C46 100 22 80 22 53C22 31 38 14 60 14Z" fill="currentColor"/><g style="fill:var(--cut,#111114)"><rect x="66.5" y="27" width="5" height="22" rx="2.5" transform="rotate(20 69 38)"/><path d="M47 45Q60 38 73 45L72.5 48L47.5 48Z"/><path d="M49 50L71 50L67.5 74Q67 78 63 78L57 78Q53 78 52.5 74Z"/></g></symbol>
+  <symbol id="burst" viewBox="0 0 100 100"><path d="M50 0L56.65 8.02L65.45 2.45L69.29 12.13L79.39 9.55L80.05 19.95L90.45 20.61L87.87 30.71L97.55 34.55L91.98 43.35L100 50L91.98 56.65L97.55 65.45L87.87 69.29L90.45 79.39L80.05 80.05L79.39 90.45L69.29 87.87L65.45 97.55L56.65 91.98L50 100L43.35 91.98L34.55 97.55L30.71 87.87L20.61 90.45L19.95 80.05L9.55 79.39L12.13 69.29L2.45 65.45L8.02 56.65L0 50L8.02 43.35L2.45 34.55L12.13 30.71L9.55 20.61L19.95 19.95L20.61 9.55L30.71 12.13L34.55 2.45L43.35 8.02Z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2Zm0 1.9a7.9 7.9 0 1 1-4.2 14.6l-.3-.2-2.6.7.7-2.5-.2-.3A7.9 7.9 0 0 1 12 4.1Z" fill="currentColor"/><path d="M8.6 7.3c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.1.2-.2.3 0 .6.5.9 1.4 1.8 2.4 2.3.3.2.4.1.6 0l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.4.4 0 .5-.1 1.1-.6 1.5-.6.5-1.4.7-2.2.5-2.8-.7-5.2-3.1-5.8-5.9-.2-.8.1-1.7.3-2.6Z" fill="currentColor"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></symbol>
+</svg>
+
+<header class="hero" id="topo">
+  <div class="hero__top">
+    <span class="status" id="status" data-open="" hidden><i class="status__dot" aria-hidden="true"></i><span id="status-text"></span></span>
+    <span data-fill="cidade">Mogi Mirim · SP</span>
+  </div>
+
+  <div class="hero__body">
+    <div class="hero__mark land" style="--i:0">
+      <svg class="mark" viewBox="0 0 80 100" role="img" aria-label="Marca do Ponto do Copão: um pin de mapa com um copão dentro"><use href="#pin"/></svg>
+      <div class="seal seal--hero" aria-hidden="true"><svg><use href="#burst"/></svg><span id="hero-seal">Até<br>tarde</span></div>
+    </div>
+
+    <div>
+      <h1 class="stack" aria-label="Ponto do Copão">
+        <span class="fit land" style="--i:1" aria-hidden="true"><span>Ponto</span></span>
+        <span class="fit land" style="--i:2" aria-hidden="true"><span>do Copão</span></span>
+      </h1>
+      <p class="tagline land" style="--i:3;margin-top:1.1rem">Bebidas <i aria-hidden="true">·</i> Delivery</p>
+    </div>
+  </div>
+
+  <div class="band on-gold land" style="--i:4" id="hero-cta">
+    <p class="band__label">Chama no zap</p>
+    <p class="band__sub">Retira na loja ou recebe gelado onde você estiver.</p>
+    <a class="btn btn--wa btn--block" data-wa="geral" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir no WhatsApp</a>
+  </div>
+</header>
+
+<div class="tape" aria-hidden="true">
+  <div class="tape__track">
+    <div class="tape__run">Gelada <b></b> Destilados <b></b> Combo pro copão <b></b> Retirada <b></b> Delivery <b></b> Até tarde <b></b></div>
+    <div class="tape__run">Gelada <b></b> Destilados <b></b> Combo pro copão <b></b> Retirada <b></b> Delivery <b></b> Até tarde <b></b></div>
+  </div>
+</div>
+
+<main>
+  <section class="lineup on-gold" aria-labelledby="lineup-t">
+    <div class="wrap">
+      <h2 class="stack" id="lineup-t"><span class="fit"><span>Tem no Ponto</span></span></h2>
+
+      <ul class="acts">
+        <li class="act">
+          <a data-wa="cerveja" href="https://wa.me/" target="_blank" rel="noopener">
+            <span class="fit act__name"><span>Cerveja gelada</span></span>
+            <span class="act__what">Trincando de gelada, pra levar ou receber.</span>
+            <span class="act__go">Pedir <svg aria-hidden="true"><use href="#arrow"/></svg></span>
+          </a>
+        </li>
+        <li class="act">
+          <a data-wa="destilados" href="https://wa.me/" target="_blank" rel="noopener">
+            <span class="fit act__name"><span>Destilados</span></span>
+            <span class="act__what">Whisky e outras garrafas, com energético pra acompanhar.</span>
+            <span class="act__go">Pedir <svg aria-hidden="true"><use href="#arrow"/></svg></span>
+          </a>
+        </li>
+        <li class="act">
+          <a data-wa="combo" href="https://wa.me/" target="_blank" rel="noopener">
+            <span class="fit act__name"><span>Combo pro copão</span></span>
+            <span class="act__what">Leva tudo pra montar o seu:</span>
+            <span class="steps">
+              <span><b>01</b>Garrafa de whisky ou a dose</span>
+              <span><b>02</b>Gelo de sabor</span>
+              <span><b>03</b>Energético</span>
+            </span>
+            <span class="act__go">Pedir <svg aria-hidden="true"><use href="#arrow"/></svg></span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="copao">
+        <p>E o copão? A gente faz, bem servido.</p>
+        <a class="btn btn--ink" data-wa="copao" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Chamar no zap</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="modes" aria-labelledby="modes-t">
+    <div class="wrap">
+      <h2 class="stack" id="modes-t" aria-label="Retira ou a gente leva">
+        <span class="fit" aria-hidden="true"><span>Retira ou</span></span>
+        <span class="fit" aria-hidden="true"><span>a gente leva</span></span>
+      </h2>
+
+      <div class="modes__grid">
+        <article class="mode">
+          <h3>Retirada na loja</h3>
+          <p>Passa no Ponto, pega gelado e segue a noite.</p>
+          <dl class="facts">
+            <dt>Endereço</dt><dd data-fill="endereco">Rua Karajá, 21 · Vila Dias</dd>
+            <dt>Horário</dt><dd data-fill="horarioTexto">16h às 00h</dd>
+          </dl>
+          <div class="mode__actions">
+            <a class="btn btn--ghost" id="map-link" href="#" aria-disabled="true">Ver no mapa</a>
+            <a class="btn btn--wa" data-wa="retirada" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir pra retirar</a>
+          </div>
+        </article>
+
+        <article class="mode">
+          <div class="seal seal--mode" aria-hidden="true"><svg><use href="#burst"/></svg><span>Chega<br>gelado</span></div>
+          <h3>Delivery</h3>
+          <p>Entrega rápida: chega rápido e chega gelado, em casa, na resenha ou onde a noite estiver.</p>
+          <dl class="facts">
+            <dt>Onde</dt><dd data-fill="deliveryArea"></dd>
+            <dt>Taxa</dt><dd data-fill="deliveryTaxa"></dd>
+            <dt>Apps</dt><dd class="apps"><span data-app="ifood">iFood</span><span data-app="zeDelivery">Zé Delivery</span></dd>
+          </dl>
+          <div class="mode__actions">
+            <a class="btn btn--wa" data-wa="delivery" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir delivery</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="tape tape--ink" aria-hidden="true">
+    <div class="tape__track">
+      <div class="tape__run">Até tarde <b></b> Entrega rápida <b></b> Copão bem servido <b></b> Também no iFood e no Zé Delivery <b></b></div>
+      <div class="tape__run">Até tarde <b></b> Entrega rápida <b></b> Copão bem servido <b></b> Também no iFood e no Zé Delivery <b></b></div>
+    </div>
+  </div>
+
+
+  <section class="order" id="pedido" aria-labelledby="order-t">
+    <div class="wrap">
+      <h2 class="stack" id="order-t" aria-label="Info e pedidos">
+        <span class="fit" aria-hidden="true"><span>Info e</span></span>
+        <span class="fit" aria-hidden="true"><span>pedidos</span></span>
+      </h2>
+      <p class="lede">Marca o que você quer e como prefere receber. A mensagem já vai escrita pro nosso WhatsApp.</p>
+
+      <form class="composer" id="composer" onsubmit="return false">
+        <fieldset>
+          <legend>O que vai ser?</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="item" value="cerveja gelada"><span>Cerveja gelada</span></label>
+            <label class="chip"><input type="checkbox" name="item" value="destilados"><span>Destilados</span></label>
+            <label class="chip"><input type="checkbox" name="item" value="o combo pra montar copão (bebida + gelo de sabor + energético)"><span>Combo pro copão</span></label>
+            <label class="chip"><input type="checkbox" name="item" value="copão"><span>Copão</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Como você quer?</legend>
+          <div class="seg">
+            <label><input type="radio" name="modo" value="retirada" checked><span>Retirar na loja</span></label>
+            <label><input type="radio" name="modo" value="delivery"><span>Delivery</span></label>
+          </div>
+          <label class="field" id="addr-field" hidden>
+            <span>Endereço ou bairro (opcional)</span>
+            <input type="text" name="endereco" autocomplete="street-address" placeholder="Rua, número e bairro">
+          </label>
+        </fieldset>
+
+        <figure class="ticket">
+          <figcaption>Sua mensagem vai assim <i aria-hidden="true"></i></figcaption>
+          <p id="msg" aria-live="polite"></p>
+        </figure>
+
+        <div class="composer__send">
+          <a class="btn btn--wa btn--block" id="send" data-wa="geral" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Enviar no WhatsApp</a>
+          <p class="composer__note">Abre o WhatsApp com a mensagem pronta. É só apertar enviar.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <a class="foot__wa" data-wa="geral" href="https://wa.me/" target="_blank" rel="noopener">
+        <span class="stack"><span class="fit"><span>WhatsApp</span></span></span>
+        <strong data-fill="whatsappExibicao"></strong>
+      </a>
+      <dl class="facts foot__facts">
+        <dt>Endereço</dt><dd data-fill="endereco">Rua Karajá, 21 · Vila Dias</dd>
+        <dt>Horário</dt><dd data-fill="horarioTexto">16h às 00h</dd>
+        <dt>Também no</dt><dd class="apps"><span data-app="ifood">iFood</span><span data-app="zeDelivery">Zé Delivery</span></dd>
+        <dt>Instagram</dt><dd data-fill="instagram"></dd>
+      </dl>
+    </div>
+
+    <p class="foot__brand">
+      <svg viewBox="0 0 80 100" aria-hidden="true"><use href="#pin"/></svg>
+      <span>Ponto do Copão<small>Bebidas · Delivery</small></span>
+    </p>
+    <p class="legal"><strong>Venda proibida para menores de 18 anos.</strong> Pode ser pedido documento na retirada e na entrega. Beba com moderação. Se beber, não dirija.</p>
+  </div>
+</footer>
+
+<div class="dock on-gold" id="dock" aria-hidden="true">
+  <span class="dock__status" id="dock-status">Até tarde</span>
+  <a class="btn btn--wa" data-wa="geral" href="https://wa.me/" target="_blank" rel="noopener" tabindex="-1"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir no WhatsApp</a>
+</div>
+
+<script>
+/* ===========================================================
+   DADOS DA LOJA: preencha aqui. Campo vazio some da página.
+   Sem número de WhatsApp, os botões ficam como "em breve".
+   =========================================================== */
+const LOJA = {
+  inaugurada: false,     // true quando a loja abrir: liga o "aberto agora / fechado"
+  whatsapp: "",          // só números, com 55 + DDD. Ex: "5519999998888"
+  whatsappExibicao: "",  // como aparece na tela. Ex: "(19) 99999-8888"
+  endereco: "Rua Karajá, 21 · Vila Dias",
+  cidade: "Mogi Mirim · SP",
+  mapa: "https://www.google.com/maps/search/?api=1&query=Rua%20Karaj%C3%A1%2C%2021%2C%20Vila%20Dias%2C%20Mogi%20Mirim%20-%20SP",
+  instagram: "",         // sem @. Ex: "pontodocopao"
+  horario: { abre: "16:00", fecha: "00:00", dias: [0,1,2,3,4,5,6] }, // dias: 0 = domingo. Tire o dia em que não abre.
+  deliveryArea: "",      // Ex: "Centro, Linda Chaib e região"
+  deliveryTaxa: "",      // Ex: "A partir de R$ 5"
+  ifood: "",             // link da loja no iFood (vazio = só o nome aparece)
+  zeDelivery: ""         // link da loja no Zé Delivery (vazio = só o nome aparece)
+};
+
+const SAUDA = "Oi, Ponto do Copão!";
+const MSGS = {
+  geral: `${SAUDA} Quero fazer um pedido.`,
+  cerveja: `${SAUDA} Quero cerveja gelada. O que tem hoje?`,
+  destilados: `${SAUDA} Quero ver os destilados e garrafas.`,
+  combo: `${SAUDA} Quero o combo pra montar meu copão (bebida + gelo de sabor + energético).`,
+  copao: `${SAUDA} Quero um copão. Quais vocês fazem hoje?`,
+  retirada: `${SAUDA} Quero fazer um pedido pra retirar na loja.`,
+  delivery: `${SAUDA} Quero pedir delivery. Meu endereço é: `
+};
+
+const wa = (text) => {
+  const num = (LOJA.whatsapp || "").replace(/\D/g, "");
+  return `https://wa.me/${num}?text=${encodeURIComponent(text)}`;
+};
+
+/* horário num formato só, em todo lugar: "16h", "00h", "18h30" */
+const hh = (t) => { const [h, m] = t.split(":").map(Number); return String(h).padStart(2, "0").replace(/^0(?=[1-9])/, "") + "h" + (m ? String(m).padStart(2, "0") : ""); };
+if (LOJA.horario) LOJA.horarioTexto = `${hh(LOJA.horario.abre)} às ${hh(LOJA.horario.fecha)}`;
+
+/* placeholders -> dados reais */
+document.querySelectorAll("[data-fill]").forEach((el) => {
+  const key = el.dataset.fill;
+  let val = LOJA[key];
+  if (!val) {
+    /* sem dado: some a linha inteira (rótulo + valor) */
+    el.hidden = true;
+    const dt = el.previousElementSibling;
+    if (el.tagName === "DD" && dt && dt.tagName === "DT") dt.hidden = true;
+    return;
+  }
+  if (key === "instagram") {
+    el.innerHTML = "";
+    const a = document.createElement("a");
+    a.href = `https://instagram.com/${val.replace(/^@/, "")}`;
+    a.target = "_blank"; a.rel = "noopener";
+    a.textContent = "@" + val.replace(/^@/, "");
+    el.appendChild(a);
+  } else {
+    el.textContent = val;
+  }
+});
+document.querySelectorAll("[data-app]").forEach((el) => {
+  const url = LOJA[el.dataset.app];
+  if (!url) return;
+  const a = document.createElement("a");
+  a.href = url; a.target = "_blank"; a.rel = "noopener"; a.className = "apps__link";
+  a.dataset.app = el.dataset.app; a.textContent = el.textContent;
+  el.replaceWith(a);
+});
+const map = document.getElementById("map-link");
+if (LOJA.mapa) { map.href = LOJA.mapa; map.target = "_blank"; map.rel = "noopener"; map.removeAttribute("aria-disabled"); }
+else { map.addEventListener("click", (e) => e.preventDefault()); }
+
+const temZap = (LOJA.whatsapp || "").replace(/\D/g, "").length >= 12;
+document.querySelectorAll("[data-wa]").forEach((a) => {
+  if (temZap) { a.href = wa(MSGS[a.dataset.wa] || MSGS.geral); return; }
+  /* sem número ainda: botão desativado, sem link */
+  a.removeAttribute("href"); a.removeAttribute("target"); a.removeAttribute("rel");
+  if (a.classList.contains("btn") || a.classList.contains("foot__wa")) a.setAttribute("aria-disabled", "true");
+  if (a.classList.contains("btn")) {
+    const icon = a.querySelector("svg");
+    a.textContent = "WhatsApp em breve";
+    if (icon) a.prepend(icon);
+  }
+});
+if (!temZap) {
+  document.querySelectorAll(".act__go").forEach((el) => el.remove());
+  const num = document.querySelector('.foot__wa [data-fill="whatsappExibicao"]');
+  if (num) { num.hidden = false; num.textContent = "Em breve"; }
+  const note = document.querySelector(".composer__note");
+  if (note) note.textContent = "Os pedidos pelo WhatsApp começam na inauguração.";
+  document.getElementById("dock").hidden = true;
+  document.body.style.paddingBottom = "0";
+}
+
+/* aberto agora? */
+function status(h) {
+  if (!h || !h.abre || !h.fecha) return null;
+  const toMin = (t) => { const [a, b] = t.split(":").map(Number); return a * 60 + (b || 0); };
+  const now = new Date(), d = now.getDay(), m = now.getHours() * 60 + now.getMinutes();
+  const a = toMin(h.abre), f = toMin(h.fecha), dias = h.dias || [0, 1, 2, 3, 4, 5, 6];
+  const open = f > a ? dias.includes(d) && m >= a && m < f
+                     : (dias.includes(d) && m >= a) || (dias.includes((d + 6) % 7) && m < f);
+  return { open, abre: hh(h.abre), fecha: hh(h.fecha) };
+}
+const st = LOJA.inaugurada ? status(LOJA.horario) : null;
+if (!LOJA.inaugurada) {
+  const s = document.getElementById("status");
+  s.hidden = false; s.dataset.open = "false";
+  document.getElementById("status-text").textContent = "Inauguração em breve";
+}
+if (st) {
+  const s = document.getElementById("status");
+  s.hidden = false;
+  s.dataset.open = String(st.open);
+  document.getElementById("status-text").textContent = st.open ? `Aberto agora · até ${st.fecha}` : `Fechado · abre ${st.abre}`;
+  document.getElementById("hero-seal").innerHTML = st.open ? "Aberto<br>agora" : `Abre<br>${st.abre}`;
+  document.getElementById("dock-status").textContent = st.open ? `Aberto até ${st.fecha}` : `Abre ${st.abre}`;
+}
+
+/* compositor de pedido */
+const form = document.getElementById("composer");
+const msg = document.getElementById("msg");
+const send = document.getElementById("send");
+const addr = document.getElementById("addr-field");
+const lista = (arr) => arr.length < 2 ? arr.join("") : arr.slice(0, -1).join(", ") + " e " + arr.at(-1);
+function compose() {
+  const itens = [...form.querySelectorAll('[name="item"]:checked')].map((i) => i.value);
+  const modo = form.querySelector('[name="modo"]:checked').value;
+  const end = form.endereco.value.trim();
+  addr.hidden = modo !== "delivery";
+  let t = SAUDA + "\n";
+  t += itens.length ? `Quero pedir ${lista(itens)}.` : "Quero fazer um pedido.";
+  t += modo === "delivery" ? `\nÉ pra delivery${end ? `, no endereço: ${end}` : ""}.` : "\nVou retirar na loja.";
+  msg.textContent = t;
+  if (temZap) send.href = wa(t);
+}
+form.addEventListener("input", compose);
+compose();
+
+/* tipo do flyer: cada linha encaixada de ponta a ponta */
+function fit() {
+  document.querySelectorAll(".fit").forEach((el) => {
+    const inner = el.firstElementChild;
+    inner.style.fontVariationSettings = inner.style.fontStretch = "";
+    inner.style.fontSize = "100px";
+    const avail = el.clientWidth * 0.995;
+    let w = inner.getBoundingClientRect().width;
+    if (!w || !avail) return;
+    const cs = getComputedStyle(el);
+    const max = parseFloat(cs.getPropertyValue("--max")) || 220;
+    const size = (100 * avail) / w;
+    if (size <= max) { inner.style.fontSize = size + "px"; return; }
+    /* bateu no teto: alarga a letra (eixo wdth) até encher a linha */
+    inner.style.fontSize = max + "px";
+    let wd = parseFloat(cs.getPropertyValue("--w")) || 80;
+    for (let i = 0; i < 5; i++) {
+      w = inner.getBoundingClientRect().width;
+      const r = avail / w;
+      if (Math.abs(r - 1) < 0.004 || wd >= 150) break;
+      wd = Math.min(150, Math.max(50, wd * r));
+      inner.style.fontVariationSettings = `"wdth" ${wd}`;
+      inner.style.fontStretch = wd + "%";
+    }
+    /* sem espaçamento extra: o que faltar fecha no tamanho */
+    w = inner.getBoundingClientRect().width;
+    inner.style.fontSize = (max * avail) / w + "px";
+  });
+}
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(fit);
+let rz; addEventListener("resize", () => { cancelAnimationFrame(rz); rz = requestAnimationFrame(fit); });
+
+/* dock: aparece quando o CTA do topo sai da tela */
+const dock = document.getElementById("dock");
+const dockBtn = dock.querySelector("a");
+const seen = new Map();
+const io = temZap && new IntersectionObserver((entries) => {
+  entries.forEach((e) => seen.set(e.target, e.isIntersecting));
+  const on = ![...seen.values()].some(Boolean);
+  dock.classList.toggle("is-on", on);
+  dock.setAttribute("aria-hidden", String(!on));
+  dockBtn.tabIndex = on ? 0 : -1;
+});
+if (io) {
+  ["hero-cta", "pedido"].forEach((id) => io.observe(document.getElementById(id)));
+  io.observe(document.querySelector(".foot"));
+}
+</script>
+</body>
+</html>
