@@ -82,8 +82,38 @@ img,svg{display:block}
 .seal>svg{position:absolute;inset:0;width:100%;height:100%;fill:var(--red)}
 .seal>span{position:relative;font:900 1rem/.9 var(--display);font-variation-settings:"wdth" 70;font-stretch:70%;text-transform:uppercase;letter-spacing:.01em}
 
+/* ============ NAV ============ */
+[id]{scroll-margin-top:4rem}
+.nav{position:sticky;top:0;z-index:70;display:flex;align-items:center;gap:1rem;height:3.5rem;padding:0 var(--gut);background:var(--ink);box-shadow:0 1px 0 rgba(203,191,159,.16)}
+.nav__brand{display:flex;align-items:center;gap:.6rem;margin-right:auto;text-decoration:none;color:var(--cream)}
+.nav__brand svg{width:1.3rem;height:auto;color:var(--gold)}
+.nav__brand span{white-space:nowrap;font:900 1rem/1 var(--display);font-variation-settings:"wdth" 118;font-stretch:118%;text-transform:uppercase;letter-spacing:.03em}
+.nav__links{display:none}
+.nav__toggle{display:inline-flex;align-items:center;gap:.6rem;min-height:2.75rem;padding:.5rem .75rem;margin-right:-.75rem;border:0;border-radius:4px;background:transparent;color:var(--cream);font:900 .85rem/1 var(--display);font-variation-settings:"wdth" 130;font-stretch:130%;text-transform:uppercase;letter-spacing:.1em;cursor:pointer}
+.nav__toggle i{display:grid;gap:4px;width:1.15rem}
+.nav__toggle i::before,.nav__toggle i::after{content:"";height:2.5px;border-radius:1px;background:var(--gold);transition:transform .35s var(--ease)}
+.nav__toggle[aria-expanded="true"] i::before{transform:translateY(3.25px) rotate(45deg)}
+.nav__toggle[aria-expanded="true"] i::after{transform:translateY(-3.25px) rotate(-45deg)}
+.menu{position:fixed;inset:0;z-index:65;display:flex;flex-direction:column;justify-content:space-between;gap:2rem;overflow-y:auto;background:var(--ink);padding:calc(3.5rem + 1.75rem) var(--gut) calc(2rem + env(safe-area-inset-bottom))}
+.menu[hidden]{display:none}
+.menu__list{list-style:none;margin:0;padding:0;border-top:3px solid var(--gold)}
+.menu__list li{border-bottom:3px solid var(--gold)}
+.menu__list a{display:block;padding:1rem 0 .85rem;text-decoration:none;color:var(--cream);transition:color .2s}
+.menu__list li:nth-child(even) a{color:var(--gold)}
+.menu__list a:hover,.menu__list a:focus-visible{color:var(--cream);outline:none;background:linear-gradient(var(--red),var(--red)) 0 100%/100% 6px no-repeat}
+.menu__list .fit{--max:120}
+.menu__list li:nth-child(1) .fit{--w:96}
+.menu__list li:nth-child(2) .fit{--w:56}
+.menu__list li:nth-child(3) .fit{--w:120}
+.menu__list li:nth-child(4) .fit{--w:92}
+.menu__foot{margin:0;display:grid;gap:.3rem;font-weight:600;color:var(--cream-2)}
+@media (prefers-reduced-motion:no-preference){
+  .menu:not([hidden]){animation:menu-in .55s var(--ease)}
+}
+@keyframes menu-in{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+
 /* ============ HERO ============ */
-.hero{min-height:100svh;display:flex;flex-direction:column;position:relative}
+.hero{min-height:calc(100svh - 3.5rem);display:flex;flex-direction:column;position:relative}
 .hero__top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem var(--gut) 0;font:800 .75rem/1.2 var(--display);font-variation-settings:"wdth" 100;font-stretch:100%;text-transform:uppercase;letter-spacing:.07em;color:var(--cream-2);white-space:nowrap}
 @media (min-width:640px){.hero__top{font-variation-settings:"wdth" 125;font-stretch:125%;letter-spacing:.12em}}
 .status[hidden]{display:none}
@@ -102,7 +132,7 @@ img,svg{display:block}
 .hero h1 .fit:last-child{--w:56;color:var(--gold)}
 .tagline{margin:0;display:flex;align-items:center;justify-content:center;gap:.9rem;font:800 clamp(.95rem,4.2vw,1.3rem)/1 var(--display);font-variation-settings:"wdth" 140;font-stretch:140%;text-transform:uppercase;letter-spacing:.2em;color:var(--cream)}
 .tagline i{font-style:normal;color:var(--gold)}
-.band{background:var(--gold);color:var(--ink);padding:1.1rem var(--gut) calc(1.25rem + env(safe-area-inset-bottom) * 0);display:grid;gap:.75rem}
+.band{background:var(--gold);color:var(--ink);padding:1.1rem var(--gut) 2rem;display:grid;gap:.75rem}
 .band__label{margin:0;display:flex;align-items:center;gap:.75rem;font:900 .9rem/1 var(--display);font-variation-settings:"wdth" 150;font-stretch:150%;text-transform:uppercase;letter-spacing:.14em}
 .band__label::after{content:"";flex:1;height:2px;background:var(--ink)}
 .band__sub{margin:0;font:500 .9rem/1.35 var(--text);color:var(--gold-deep)}
@@ -118,6 +148,8 @@ img,svg{display:block}
 /* ============ TAPE ============ */
 .tape{position:relative;z-index:2;background:var(--gold);color:var(--ink);transform:rotate(-2.4deg);margin:2.25rem -6vw;overflow:hidden;box-shadow:0 10px 30px -12px rgba(0,0,0,.8)}
 .tape--ink{background:var(--cream);transform:rotate(1.8deg)}
+.tape--dark{background:var(--ink);color:var(--gold);margin-top:-1.1rem}
+.tape--dark .tape__run b{background-image:var(--pin-gold)}
 .tape__track{display:flex;width:max-content;animation:roll 34s linear infinite}
 .tape--ink .tape__track{animation-direction:reverse}
 .tape__run{display:flex;align-items:center;gap:1.1rem;padding:.7rem 0 .7rem 1.1rem;font:900 1.15rem/1 var(--display);font-variation-settings:"wdth" 118;font-stretch:118%;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
@@ -125,7 +157,7 @@ img,svg{display:block}
 @keyframes roll{to{transform:translateX(-50%)}}
 
 /* ============ LINE-UP ============ */
-.lineup{background:var(--gold);color:var(--ink);padding:calc(var(--sec) * .8) 0 var(--sec);margin-top:-3.25rem}
+.lineup{background:var(--gold);color:var(--ink);padding:calc(var(--sec) * .8 + 1.25rem) 0 var(--sec);margin-top:-4.5rem}
 .lineup h2 .fit{--w:62}
 .acts{list-style:none;margin:2.25rem 0 0;padding:0;border-top:3px solid var(--ink)}
 .act{border-bottom:3px solid var(--ink)}
@@ -234,11 +266,17 @@ a.apps__link:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
 }
 @media (min-width:960px){
   body{padding-bottom:0}
-  .hero{min-height:min(100svh,860px)}
+  .hero{min-height:min(100svh - 3.5rem,820px)}
+  .nav__links{display:flex;gap:2.25rem}
+  .nav__links a{position:relative;padding:.5rem 0;text-decoration:none;color:var(--cream-2);font:900 .8rem/1 var(--display);font-variation-settings:"wdth" 125;font-stretch:125%;text-transform:uppercase;letter-spacing:.1em;transition:color .2s}
+  .nav__links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+  .nav__links a:hover{color:var(--gold)}
+  .nav__links a:hover::after{transform:none}
+  .nav__toggle,.menu{display:none!important}
   .hero__body{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:2rem 4.5rem;width:min(100% - 2*var(--gut),var(--wrap));margin-inline:auto;padding-inline:0}
   .hero__mark{width:min(100%,360px);grid-row:1 / span 2;justify-self:center}
   .tagline{justify-content:flex-start}
-  .band{grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem 2rem;padding-inline:max(var(--gut),(100% - var(--wrap)) / 2)}
+  .band{grid-template-columns:auto 1fr auto;align-items:center;gap:1.5rem 2rem;padding-inline:max(var(--gut),(100% - var(--wrap)) / 2);padding-bottom:3rem}
   .band__label::after{display:none}
   .band .btn{min-width:20rem}
   .composer{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-areas:"items ticket" "mode ticket" "mode send";column-gap:4rem;align-items:start}
@@ -268,7 +306,30 @@ a.apps__link:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
   <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></symbol>
 </svg>
 
-<header class="hero" id="topo">
+<header class="nav">
+  <a class="nav__brand" href="#topo"><svg viewBox="0 0 80 100" aria-hidden="true"><use href="#pin"/></svg><span>Ponto do Copão</span></a>
+  <nav class="nav__links" aria-label="Seções">
+    <a href="#produtos">Produtos</a>
+    <a href="#retirada-delivery">Retira ou entrega</a>
+    <a href="#pedido">Pedido</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu"><i aria-hidden="true"></i><span>Menu</span></button>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Menu">
+    <ul class="menu__list">
+      <li><a href="#produtos" class="stack"><span class="fit"><span>Produtos</span></span></a></li>
+      <li><a href="#retirada-delivery" class="stack"><span class="fit"><span>Retira ou entrega</span></span></a></li>
+      <li><a href="#pedido" class="stack"><span class="fit"><span>Pedido</span></span></a></li>
+      <li><a href="#contato" class="stack"><span class="fit"><span>Contato</span></span></a></li>
+    </ul>
+  </nav>
+  <p class="menu__foot"><span data-fill="endereco">Rua Karajá, 21 · Mogi Mirim 2</span><span data-fill="horarioTexto">16h às 00h</span></p>
+</div>
+
+<div class="hero" id="topo">
   <div class="hero__top">
     <span class="status" id="status" data-open="" hidden><i class="status__dot" aria-hidden="true"></i><span id="status-text"></span></span>
     <span data-fill="cidade">Mogi Mirim · SP</span>
@@ -291,12 +352,12 @@ a.apps__link:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
 
   <div class="band on-gold land" style="--i:4" id="hero-cta">
     <p class="band__label">Chama no zap</p>
-    <p class="band__sub">Retira na loja ou recebe gelado onde você estiver.</p>
+    <p class="band__sub">Retira na loja ou recebe gelado na região de Mogi Mirim.</p>
     <a class="btn btn--wa btn--block" data-wa="geral" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir no WhatsApp</a>
   </div>
-</header>
+</div>
 
-<div class="tape" aria-hidden="true">
+<div class="tape tape--dark" aria-hidden="true">
   <div class="tape__track">
     <div class="tape__run">Gelada <b></b> Destilados <b></b> Combo pro copão <b></b> Retirada <b></b> Delivery <b></b> Até tarde <b></b></div>
     <div class="tape__run">Gelada <b></b> Destilados <b></b> Combo pro copão <b></b> Retirada <b></b> Delivery <b></b> Até tarde <b></b></div>
@@ -304,7 +365,7 @@ a.apps__link:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
 </div>
 
 <main>
-  <section class="lineup on-gold" aria-labelledby="lineup-t">
+  <section class="lineup on-gold" id="produtos" aria-labelledby="lineup-t">
     <div class="wrap">
       <h2 class="stack" id="lineup-t"><span class="fit"><span>Tem no Ponto</span></span></h2>
 
@@ -344,7 +405,7 @@ a.apps__link:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
     </div>
   </section>
 
-  <section class="modes" aria-labelledby="modes-t">
+  <section class="modes" id="retirada-delivery" aria-labelledby="modes-t">
     <div class="wrap">
       <h2 class="stack" id="modes-t" aria-label="Retira ou a gente leva">
         <span class="fit" aria-hidden="true"><span>Retira ou</span></span>
@@ -368,9 +429,9 @@ a.apps__link:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
         <article class="mode">
           <div class="seal seal--mode" aria-hidden="true"><svg><use href="#burst"/></svg><span>Chega<br>gelado</span></div>
           <h3>Delivery</h3>
-          <p>Entrega rápida: chega rápido e chega gelado, em casa, na resenha ou onde a noite estiver.</p>
+          <p>Entrega rápida: chega rápido e chega gelado, em casa ou na resenha.</p>
           <dl class="facts">
-            <dt>Onde</dt><dd data-fill="deliveryArea"></dd>
+            <dt>Onde</dt><dd data-fill="deliveryArea">Apenas a região de Mogi Mirim</dd>
             <dt>Taxa</dt><dd data-fill="deliveryTaxa"></dd>
             <dt>Apps</dt><dd class="apps"><span data-app="ifood">iFood</span><span data-app="zeDelivery">Zé Delivery</span></dd>
           </dl>
@@ -435,7 +496,7 @@ a.apps__link:hover{box-shadow:inset 0 0 0 1.5px var(--gold);color:var(--gold)}
   </section>
 </main>
 
-<footer class="foot">
+<footer class="foot" id="contato">
   <div class="wrap">
     <div class="foot__grid">
       <a class="foot__wa" data-wa="geral" href="https://wa.me/" target="_blank" rel="noopener">
@@ -477,7 +538,7 @@ const LOJA = {
   mapa: "https://www.google.com/maps/search/?api=1&query=Rua%20Karaj%C3%A1%2C%2021%2C%20Mogi%20Mirim%202%2C%20Mogi%20Mirim%20-%20SP",
   instagram: "",         // sem @. Ex: "pontodocopao"
   horario: { abre: "16:00", fecha: "00:00", dias: [0,1,2,3,4,5,6] }, // dias: 0 = domingo. Tire o dia em que não abre.
-  deliveryArea: "",      // Ex: "Centro, Linda Chaib e região"
+  deliveryArea: "Apenas a região de Mogi Mirim",
   deliveryTaxa: "",      // Ex: "A partir de R$ 5"
   ifood: "",             // link da loja no iFood (vazio = só o nome aparece)
   zeDelivery: ""         // link da loja no Zé Delivery (vazio = só o nome aparece)
@@ -635,6 +696,21 @@ function fit() {
 }
 (document.fonts ? document.fonts.ready : Promise.resolve()).then(fit);
 let rz; addEventListener("resize", () => { cancelAnimationFrame(rz); rz = requestAnimationFrame(fit); });
+
+/* menu do celular */
+const tog = document.querySelector(".nav__toggle");
+const menu = document.getElementById("menu");
+function setMenu(open) {
+  tog.setAttribute("aria-expanded", String(open));
+  tog.querySelector("span").textContent = open ? "Fechar" : "Menu";
+  menu.hidden = !open;
+  document.documentElement.style.overflow = open ? "hidden" : "";
+  if (open) { fit(); menu.querySelector("a").focus(); }
+}
+tog.addEventListener("click", () => setMenu(tog.getAttribute("aria-expanded") !== "true"));
+menu.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { setMenu(false); tog.focus(); } });
+matchMedia("(min-width:960px)").addEventListener("change", (e) => { if (e.matches) setMenu(false); });
 
 /* dock: aparece quando o CTA do topo sai da tela */
 const dock = document.getElementById("dock");
